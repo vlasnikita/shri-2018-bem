@@ -1,0 +1,116 @@
+.ItemSmallImage {
+	width: 100%;
+	display: grid;
+    grid-gap: 10px;
+	justify-content: center;
+	position: relative;
+	grid-template-rows: 50px auto;
+	grid-template-areas: 
+	"t t t t t t t t t t t t"
+	"i i i i i i i i i i i i";
+	grid-column: span 4;
+	height: 280px;
+}
+
+.ItemSmallImage-title-container {
+    z-index: 1;
+    grid-area: t;
+}
+
+.ItemSmallImage-title {
+	background: #fff;
+	margin: 0;
+    padding-bottom: 5px;
+    grid-area: t;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.ItemSmallImage-image-container {
+	width: auto;
+	grid-area: i;
+	position: relative;
+}
+
+.ItemSmallImage-image-container img {
+	width: 100%;
+	height: auto;
+} 
+
+.ItemSmallImage-options {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	grid-area: o;
+	flex-direction: column;
+    position: absolute;
+    right: 0;	
+    bottom: 0;
+    height: 205px;
+    padding: 15px;
+}
+
+.ItemSmallImage-options img {
+	cursor: pointer;
+}  
+
+.ItemSmallImage-channel {
+	font-weight: 700;
+	font-size: 1.2rem;
+	grid-area: c;
+}
+
+@media (max-width: 1024px) {
+	.ItemSmallImage { height: 240px; }
+	.ItemSmallImage-description {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.ItemSmallImage { height: 190px; }
+	.ItemSmallImage-description {
+		font-size: 1rem;
+	}
+	.ItemSmallImage-channel { font-size: 1rem; }  
+}
+
+@media (max-width: 550px) {
+	.ItemSmallImage { 
+		grid-gap: 5px;
+		height: 160px;
+	}
+	.ItemSmallImage-description { overflow: hidden; }
+	.ItemSmallImage-channel { 
+		font-size: .85rem; 
+		margin: auto 0;
+	}  
+	.ItemSmallImage-options {
+	    height: 85px;
+        padding: 15px 5px;
+	}
+	.ItemSmallImage-options img {
+		transform: scale(.5,.5);
+	} 
+}
+
+@media (max-width: 550px) {
+	.ItemSmallImage { 
+		grid-gap: 2px;
+		height: 100px; 
+		grid-template-rows: 30px auto;
+	}
+	.ItemSmallImage-title {
+	    max-height: 28px;
+	    overflow: hidden;
+	}
+	.ItemSmallImage-channel { 
+		font-size: .85rem; 
+		margin: auto 0;
+	}  
+	.ItemSmallImage-options {
+	    height: 70px;
+        padding: 3px 0;
+	}
+}

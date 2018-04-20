@@ -1,0 +1,8 @@
+.Feed {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 50px;
+	grid-auto-rows: auto;
+	grid-auto-flow: dense;
+}

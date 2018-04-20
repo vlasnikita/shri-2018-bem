@@ -1,0 +1,112 @@
+.ItemSmallDescription {
+	width: 100%;
+	display: grid;
+    grid-gap: 10px;
+	justify-content: center;
+	grid-column: span 4;
+	height: 280px;
+	grid-template-rows: auto minmax(1px, min-content) 20px;
+	grid-template-areas: 
+	"t t t t t t t t t t t t"
+	"d d d d d d d d d d d d"
+	"c c c c c c c c c o o o";
+}
+
+.ItemSmallDescription-title-container {
+    z-index: 1;
+    grid-area: t;
+}
+
+.ItemSmallDescription-title {
+	background: #fff;
+	margin: 0;
+    padding-bottom: 5px;
+    grid-area: t;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.ItemSmallDescription-image-container {
+	width: auto;
+	grid-area: i;
+}
+
+.ItemSmallDescription-image-container img {
+	width: 100%;
+	height: auto;
+} 
+
+.ItemSmallDescription-description {
+	width: 100%;
+	font-size: 1rem;
+	grid-area: d;
+	overflow: hidden;
+	line-height: 1.3rem;
+	height: auto;
+}
+
+.ItemSmallDescription-options {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	grid-area: o;
+	flex-direction: row;
+}
+
+.ItemSmallDescription-options img {
+	cursor: pointer;
+}  
+
+.ItemSmallDescription-channel {
+	font-weight: 700;
+	font-size: 1.2rem;
+	grid-area: c;
+}
+
+@media (max-width: 1024px) {
+	.ItemSmallDescription { height: 240px; }
+	.ItemSmallDescription-description {
+		font-size: 1.1rem;
+		line-height: 1.4rem;
+	} 
+}
+
+@media (max-width: 800px) {
+	.ItemSmallDescription { height: 190px; }
+	.ItemSmallDescription-description {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+	.ItemSmallDescription-channel { font-size: 1rem; }  
+}
+
+@media (max-width: 550px) {
+	.ItemSmallDescription { 
+		grid-gap: 5px;  
+		height: 148px;
+	}
+	.ItemSmallDescription-description { overflow: hidden; }
+	.ItemSmallDescription-channel { 
+		font-size: .85rem; 
+		margin: auto 0;
+	}  
+	.ItemSmallDescription-options img {
+		transform: scale(.5,.5);
+	} 
+}
+
+@media (max-width: 550px) {
+	.ItemSmallDescription { 
+		grid-gap: 2px;  
+		height: 108px;
+	}
+	.ItemSmallDescription-title {
+	    max-height: 28px;
+	    overflow: hidden;
+	}
+	.ItemSmallDescription-channel { 
+		font-size: .85rem; 
+		margin: auto 0;
+	}  
+}
